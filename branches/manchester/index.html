@@ -39,6 +39,9 @@
       };
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "Spline Sans", sans-serif;
       }
@@ -63,7 +66,36 @@
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-6">
         <a href="/" class="text-xl font-bold text-primary">Faith Church Ministries</a>
         <nav aria-label="Primary" class="hidden items-center gap-6 text-sm font-medium text-text-muted lg:flex">
-          <a href="#visit" class="hover:text-primary transition-colors">Visit Us</a>
+          <details class="relative group">
+            <summary
+              class="flex cursor-pointer list-none items-center gap-1 text-sm font-semibold text-text-main hover:text-primary transition-colors"
+            >
+              Visit Us
+              <span class="material-symbols-outlined text-base transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="absolute left-0 mt-2 w-48 rounded-2xl bg-white shadow-lg ring-1 ring-black/5">
+              <ul class="py-2 text-sm text-text-main">
+                <li>
+                  <a href="/branches/manchester/index.html" class="block px-4 py-2 hover:bg-primary/10">Manchester</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-primary/10">Wembley</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-primary/10">Sutton</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-primary/10">Leicester</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-primary/10">Liverpool</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-primary/10">Luton</a>
+                </li>
+              </ul>
+            </div>
+          </details>
           <a href="#about" class="hover:text-primary transition-colors">About</a>
           <a href="#ministries" class="hover:text-primary transition-colors">Ministries</a>
           <a href="#events" class="hover:text-primary transition-colors">Events</a>
@@ -174,45 +206,16 @@
                 New here? Dress comfortably, bring your friends, and feel free to check your kids in to our teams from 10:30 AM.
               </p>
             </div>
-            <section id="welcome-team" class="rounded-3xl border border-gray-100 p-8 shadow-card bg-white">
-              <p class="text-sm font-semibold uppercase text-primary">Meet the Welcome Team</p>
-              <h2 class="mt-3 text-3xl font-bold text-text-main">Here to help you feel at home</h2>
-              <p class="mt-2 text-text-muted">
-                We believe church is more than a service — it’s a family.<br />
-                Our welcome team is here to help you feel at home from the moment you arrive.
+            <section class="rounded-3xl border border-gray-100 p-8 scroll-mt-28 bg-white shadow-card" id="about" aria-labelledby="welcome-team-heading">
+              <p class="text-sm font-semibold uppercase text-primary tracking-wide">Meet the Welcome Team</p>
+              <h2 class="mt-3 text-3xl font-bold text-text-main" id="welcome-team-heading">You’re Not Visiting Alone</h2>
+              <p class="mt-4 text-text-muted leading-relaxed">
+                Whether this is your first visit or you’ve been searching for a church home, our welcome team is ready to walk with you.
+                We take care of the practical details — where to go, who to meet, what to expect — so you can feel relaxed, seen, and supported
+                as you discover your next step with Jesus and with us.
               </p>
 
-              <div class="mt-8 grid gap-5 sm:grid-cols-2">
-                <article class="rounded-2xl bg-primary-bg p-5">
-                  <div class="flex items-center gap-3 text-primary">
-                    <span class="material-symbols-outlined text-3xl">diversity_1</span>
-                    <h3 class="text-lg font-semibold text-text-main">Welcome Lead</h3>
-                  </div>
-                  <p class="mt-3 text-sm text-text-muted">
-                    Your first visit, service flow, seating, and how to get connected at Faith Church Manchester.
-                  </p>
-                </article>
-
-                <article class="rounded-2xl bg-primary-bg p-5">
-                  <div class="flex items-center gap-3 text-primary">
-                    <span class="material-symbols-outlined text-3xl">child_care</span>
-                    <h3 class="text-lg font-semibold text-text-main">Kids Team Lead</h3>
-                  </div>
-                  <p class="mt-3 text-sm text-text-muted">
-                    Children’s ministry, safety, age groups, and how your kids can enjoy church in a fun and secure environment.
-                  </p>
-                </article>
-
-                <article class="rounded-2xl bg-primary-bg p-5 sm:col-span-2">
-                  <div class="flex items-center gap-3 text-primary">
-                    <span class="material-symbols-outlined text-3xl">hands_prayer</span>
-                    <h3 class="text-lg font-semibold text-text-main">Prayer Team</h3>
-                  </div>
-                  <p class="mt-3 text-sm text-text-muted">
-                    Prayer support, one-to-one prayer, and how we can stand with you in faith during any season of life.
-                  </p>
-                </article>
-              </div>
+        
 
               <div class="mt-8 flex flex-wrap gap-4">
                 <a
@@ -222,10 +225,10 @@
                   Message the Welcome Team
                 </a>
                 <a
-                  href="/contact"
+                  href="#plan-visit"
                   class="inline-flex items-center rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
-                  WhatsApp Us
+                  Plan Your Visit
                 </a>
               </div>
             </section>
@@ -245,7 +248,7 @@
             <div class="space-y-6">
               <figure class="overflow-hidden rounded-3xl bg-white shadow-card">
                 <img
-                  src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=80"
                   alt="Worship gathering"
                   class="h-56 w-full object-cover"
                   loading="lazy"
@@ -254,7 +257,7 @@
               </figure>
               <figure class="overflow-hidden rounded-3xl bg-white shadow-card">
                 <img
-                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
                   alt="Fellowship"
                   class="h-56 w-full object-cover"
                   loading="lazy"
@@ -265,7 +268,7 @@
             <div class="space-y-6">
               <figure class="overflow-hidden rounded-3xl bg-white shadow-card">
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=900&q=80"
                   alt="Prayer"
                   class="h-56 w-full object-cover"
                   loading="lazy"
@@ -274,7 +277,7 @@
               </figure>
               <figure class="overflow-hidden rounded-3xl bg-white shadow-card">
                 <img
-                  src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80"
                   alt="Youth"
                   class="h-56 w-full object-cover"
                   loading="lazy"
@@ -285,7 +288,7 @@
             <div class="space-y-6">
               <figure class="overflow-hidden rounded-3xl bg-white shadow-card">
                 <img
-                  src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
                   alt="Families"
                   class="h-56 w-full object-cover"
                   loading="lazy"
@@ -294,7 +297,7 @@
               </figure>
               <figure class="overflow-hidden rounded-3xl bg-white shadow-card">
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
                   alt="Outreach"
                   class="h-56 w-full object-cover"
                   loading="lazy"
@@ -306,7 +309,7 @@
         </div>
       </section>
 
-      <section id="ministries" class="bg-white py-16">
+      <section id="ministries" class="bg-white py-16 scroll-mt-28">
         <div class="mx-auto max-w-6xl px-4 lg:px-6">
           <div class="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -341,7 +344,7 @@
             </article>
             <article class="rounded-3xl border border-primary/10 p-6 shadow-card">
               <div class="flex items-center gap-3 text-primary">
-                <span class="material-symbols-outlined text-3xl">hands_prayer</span>
+                <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
                 <h3 class="text-xl font-semibold text-text-main">Prayer</h3>
               </div>
               <p class="mt-3 text-text-muted">
@@ -534,6 +537,20 @@
           } catch (err) {
             button.textContent = "Unable to copy";
           }
+        });
+      });
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const targetId = link.getAttribute("href");
+          if (!targetId || targetId === "#") {
+            return;
+          }
+          const targetEl = document.querySelector(targetId);
+          if (!targetEl) {
+            return;
+          }
+          event.preventDefault();
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
     </script>

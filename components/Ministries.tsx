@@ -30,7 +30,7 @@ const ministries: Ministry[] = [
 
 const Ministries: React.FC = () => {
   return (
-    <section className="py-16 bg-background-light dark:bg-background-dark">
+    <section id="ministries" className="py-16 bg-background-light dark:bg-background-dark scroll-mt-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
           <div>
