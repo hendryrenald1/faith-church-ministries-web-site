@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faith Church Ministries</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#651c78", // Purple based on logo
+              "primary-light": "#8a3ca3", // Lighter shade for hovers
+              "primary-bg": "#fcf5fd", // Very light purple for backgrounds
+              "background-light": "#fcfcfc",
+              "background-dark": "#1a1625", // Dark purple-ish black
+              "text-main": "#2a1c3d", // Deep purple-black for text
+              "text-muted": "#6b5b7b",
+            },
+            fontFamily: {
+              display: ["Spline Sans", "sans-serif"],
+              body: ["Spline Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Spline Sans", sans-serif;
+      }
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e5e7eb;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d1d5db;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #374151;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased transition-colors duration-200"
+  >
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
