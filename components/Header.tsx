@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 
+const addBasePath = (href: string) => {
+  if (!href.startsWith('/')) return href;
+  const base = import.meta.env.BASE_URL ?? '/';
+  return `${base}${href.replace(/^\//, '')}`;
+};
+
 const branchLinks = [
-  { label: 'Manchester', href: '/branches/manchester/index.html' },
+  { label: 'Manchester', href: addBasePath('/branches/manchester/index.html') },
   { label: 'Wembley', href: '#wembley' },
   { label: 'Sutton', href: '#sutton' },
   { label: 'Leicester', href: '#leicester' },
