@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Volumes/External/Desktop/code/faith-church-ministries-web-site/app/layout\":[\"static/media/cf1398c533b7af5b-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

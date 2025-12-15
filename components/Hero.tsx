@@ -1,9 +1,11 @@
-import React from 'react';
+'use client';
 
-const Hero: React.FC = () => {
-  const backgroundVideoRef = React.useRef<HTMLVideoElement | null>(null);
+import { useEffect, useRef } from 'react';
 
-  React.useEffect(() => {
+const Hero = () => {
+  const backgroundVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
     const video = backgroundVideoRef.current;
     if (!video) {
       return undefined;

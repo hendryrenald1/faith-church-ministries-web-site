@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+'use client';
+
+import { useState } from 'react';
 
 interface FAQItem {
   question: string;
@@ -28,7 +30,7 @@ const faqs: FAQItem[] = [
   }
 ];
 
-const FAQ: React.FC = () => {
+const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {

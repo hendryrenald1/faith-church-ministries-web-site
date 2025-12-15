@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Testimonial: React.FC = () => {
+const Testimonial = () => {
   return (
     <section className="py-20 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">

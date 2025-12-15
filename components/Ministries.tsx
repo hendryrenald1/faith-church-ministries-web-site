@@ -1,5 +1,4 @@
-import React from 'react';
-import { Ministry } from '../types';
+import { Ministry } from '@/types';
 
 const ministries: Ministry[] = [
   {
@@ -28,7 +27,7 @@ const ministries: Ministry[] = [
   },
 ];
 
-const Ministries: React.FC = () => {
+const Ministries = () => {
   return (
     <section id="ministries" className="py-16 bg-background-light dark:bg-background-dark scroll-mt-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

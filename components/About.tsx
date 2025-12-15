@@ -1,6 +1,4 @@
-import React from 'react';
-
-const About: React.FC = () => {
+const About = () => {
   return (
     <section id="about" className="py-20 bg-white dark:bg-[#251e30] scroll-mt-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,4 @@
-import React from 'react';
-
-const CallToAction: React.FC = () => {
+const CallToAction = () => {
   return (
     <section className="bg-background-dark py-24 text-center px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>

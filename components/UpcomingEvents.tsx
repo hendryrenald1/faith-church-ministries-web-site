@@ -1,5 +1,4 @@
-import React from 'react';
-import { Event } from '../types';
+import { Event } from '@/types';
 
 const events: Event[] = [
   {
@@ -28,7 +27,7 @@ const events: Event[] = [
   },
 ];
 
-const UpcomingEvents: React.FC = () => {
+const UpcomingEvents = () => {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">

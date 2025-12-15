@@ -1,6 +1,4 @@
-import React from 'react';
-
-const LatestSermon: React.FC = () => {
+const LatestSermon = () => {
   return (
     <div className="flex flex-col gap-6">
       <h2 className="text-3xl font-bold text-text-main dark:text-white">Latest Sermon</h2>

@@ -1,6 +1,4 @@
-import React from 'react';
-
-const WelcomeVideo: React.FC = () => {
+const WelcomeVideo = () => {
   return (
     <div className="flex flex-col items-center text-center">
       <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl shadow-primary/20 aspect-video max-w-3xl bg-black mb-10 group cursor-pointer ring-4 ring-white dark:ring-gray-800">

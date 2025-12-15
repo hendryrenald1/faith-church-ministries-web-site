@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 
 const images = [
   {
@@ -23,7 +25,7 @@ const images = [
   },
 ];
 
-const ImageCarousel: React.FC = () => {
+const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 

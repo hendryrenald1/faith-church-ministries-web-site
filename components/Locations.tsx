@@ -1,5 +1,4 @@
-import React from 'react';
-import { Location } from '../types';
+import { Location } from '@/types';
 
 const locationsData: Location[] = [
   {
@@ -68,7 +67,7 @@ const locationsData: Location[] = [
   },
 ];
 
-const Locations: React.FC = () => {
+const Locations = () => {
   return (
     <div id="locations-list" className="w-full grid gap-4 lg:grid-cols-2 text-left max-w-5xl mx-auto">
       {locationsData.map((loc) => (
